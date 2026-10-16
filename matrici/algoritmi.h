@@ -21,3 +21,14 @@ void afisare(int a[][1000], int n, int m) {
 		cout << endl;
 	}
 }
+
+void scriere(int a[][1000], int n, int m) {
+	ofstream fout("matrice.out");
+	fout << n << " " << m << endl;
+	for (int i = 0;i < n;i++) {
+		for (int j = 0;j < m;j++) {
+			fout << a[i][j] << " ";
+		}
+		fout << endl;
+	}
+}
