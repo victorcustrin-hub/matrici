@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="matrici/matrici.vcxproj" />
+  <Project Path="matrici/matrici.vcxproj" Id="84f369a4-fa3b-47ee-874f-bfcadd87ef43" />
 </Solution>

@@ -141,6 +141,13 @@
   <ItemGroup>
     <ClCompile Include="matrici.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="algoritmi.h" />
+    <ClInclude Include="parcurgerea_matricilor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="matrice.in" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
