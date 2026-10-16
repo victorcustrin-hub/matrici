@@ -4,7 +4,7 @@ using namespace std;
 
 
 
-void afisare(int m[50][1000],int l,int c) {
+void afisare(int m[100][100],int l,int c) {
 
 	for (int i = 0;i < l;i++) {
 		for (int j = 0;j < c;j++) {
@@ -16,6 +16,6 @@ void afisare(int m[50][1000],int l,int c) {
 }
 
 
-void afisareColoana(int m[50][1000], int l, int c, int x) {
+void afisareColoana(int m[100][100], int l, int c, int x) {
 	
 }

@@ -3,7 +3,7 @@
 #include <fstream>
 using namespace std;
 
-void citire(int a[][1000], int& n, int& m) {
+void citire(int a[100][100], int& n, int& m) {
 	ifstream fin("matrice.in");
 	fin >> n >> m;
 	for (int i = 0;i < n;i++) {
@@ -34,7 +34,7 @@ void citire(int a[][1000], int& n, int& m) {
 //        3<3     endl     3
 //3<3 nu
 
-void afisare(int a[][1000], int n, int m) {
+void afisare(int a[100][100], int n, int m) {
 	for (int i = 0;i < n;i++) {
 		for (int j = 0;j < m;j++) {
 			cout << a[i][j] << " ";
@@ -43,7 +43,7 @@ void afisare(int a[][1000], int n, int m) {
 	}
 }
 
-void scriere(int a[][1000], int n, int m) {
+void scriere(int a[100][100], int n, int m) {
 	ofstream fout("matrice.out");
 	fout << n << " " << m << endl;
 	for (int i = 0;i < n;i++) {
