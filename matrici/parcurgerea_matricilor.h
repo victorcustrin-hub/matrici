@@ -15,7 +15,11 @@ void afisare(int m[100][100],int l,int c) {
 
 }
 
-
-void afisareColoana(int m[100][100], int l, int c, int x) {
+void afisareColoana(int m[100][100], int l, int x) {
 	
+	for (int i = 0;i < l;i++) {
+		cout << m[i][x] << " ";
+		cout << endl;
+	 }
 }
+
