@@ -608,23 +608,23 @@ void ex3e(int m[100][100], int l, int c) {
 	int ct = 0;
 
 	for (int i = 0;i < l;i++) {
-		int s = 0;
-		int d = c - 1;
+		int st = 0;
+		int dr = c - 1;
 		bool vf = true;
 		do {
-			if (m[i][s] != m[i][d]) {
+			if (m[i][st] != m[i][dr]) {
 				vf = false;
 			}
-			s++;
-			d--;
-		} while (vf == true && s < d);
+			st++;
+			dr--;
+		} while (vf == true && st < dr);
 		
 		if (vf == true) {
 			ct++;
 		}
 	}
 	cout << ct << endl;
-}
+} 
 //
 
 //??
