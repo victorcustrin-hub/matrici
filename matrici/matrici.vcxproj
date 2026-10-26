@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="algoritmi.h" />
     <ClInclude Include="exercitii-matrici2.h" />
+    <ClInclude Include="manual.h" />
     <ClInclude Include="parcurgerea_matricilor.h" />
   </ItemGroup>
   <ItemGroup>

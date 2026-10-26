@@ -667,7 +667,7 @@ void ex2g(int m[100][100], int l, int c) {
 		}
 	}
 
-	for (int i = 0;i < 10;i++) {
+	for (int i = 1;i < 10;i++) {
 		if (f[i] == 0) {
 			cout << i;
 		}
