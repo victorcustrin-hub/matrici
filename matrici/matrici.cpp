@@ -1,6 +1,6 @@
-#include "manual.h"
+#include "parcurgerea_matricilor.h"
 using namespace std;
 
 int main(){
-    solutie8();
+    solutie2a();
 }

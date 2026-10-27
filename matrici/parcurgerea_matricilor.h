@@ -345,12 +345,12 @@ int nr_cif_binare(int n) {
 
 void ex1g(int m[100][100], int l, int c) {
 	int ct = 0;
-	long max = -999999;
+	int max = 0;
 	int linie_rez = 0;
 
 	for (int i = 0;i < l;i++) {
 		for (int j = 0;j < c;j++) {
-			ct = nr_cif_binare(m[i][j]);
+			ct = nr_cif_binare(abs(m[i][j]));
 			if (ct > max) {
 				linie_rez = i;
 				max = ct;
@@ -385,13 +385,14 @@ void solutie1g() {
 int cif_min(int n) {
 	int min = 10;
 
-	while (n != 0) {
+	do {
 		int cif = n % 10;
 		if (cif < min) {
 			min = cif;
 		}
 		n = n / 10;
-	}
+	} while (n != 0);
+
 	return min;
 }
 
@@ -400,7 +401,7 @@ void ex2a(int m[20][1000], int l, int c) {
 	int rez = 0;
 
 	for (int i = 0;i < l;i++) {
-		max = 0;
+		max = m[i][0];
 		for (int j = 0;j < c;j++) {
 			if (m[i][j] > max) {
 				max = m[i][j];
