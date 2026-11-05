@@ -1,6 +1,6 @@
-#include "parcurgerea_matricilor_patratice.h"
+#include "diagonale.h"
 using namespace std;
 
 int main(){
-	solutie2l();
+	solutie_1();
 }

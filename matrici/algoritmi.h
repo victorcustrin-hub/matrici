@@ -190,6 +190,8 @@ bool coloanaDescrescatoare(int a[100][100], int n, int col)
 //   i=2       .    S    P    .
 //   i=3       S    .    .    P
 
+
+
 int sumaDiagonalaPrincipala(int a[100][100], int n)
 {
     int s = 0;
@@ -212,10 +214,26 @@ int sumaDiagonalaSecundara(int a[100][100], int n)
     return s;
 }
 
-//  P x x x
+//  P x x x              
 //  . P x x      i < j
 //  . . P x
 //  . . . P
+
+
+//00 01 02   1 2 3
+//10 11 12   4 5 6
+//20 21 22   7 8 9
+
+//i<n      j<n        s         j       i
+//0<3      1<3       0+2=2      2       -
+// -       2<3       2+3=5      3       -
+//         3<3 nu      -        -       1
+//1<3 da   2<3       5+6=11     3       -
+// -       3<3 nu      -        -       2
+//2<3 da   3<3 nu      -        -       3
+//3<3 nu
+
+//s=11
 
 int sumaDeasupraDiagonaleiPrincipale(int a[100][100], int n)
 {
@@ -230,11 +248,16 @@ int sumaDeasupraDiagonaleiPrincipale(int a[100][100], int n)
 
     return s;
 }
-
-//  P . . .
+                            
+//  P . . .                  
 //  x P . .      i > j
 //  x x P .
 //  x x x P
+
+//00 01 02   1 2 3
+//10 11 12   4 5 6
+//20 21 22   7 8 9
+
 
 int sumaSubDiagonalaPrincipala(int a[100][100], int n)
 {

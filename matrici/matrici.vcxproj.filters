@@ -35,6 +35,12 @@
     <ClInclude Include="parcurgerea_matricilor_patratice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="parcurgere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="diagonale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="matrice.in">
