@@ -32,6 +32,9 @@
     <ClInclude Include="manual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="parcurgerea_matricilor_patratice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="matrice.in">
