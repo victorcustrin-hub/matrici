@@ -1,4 +1,4 @@
-#include "diagonale.h"
+#include "stergeri.h"
 using namespace std;
 
 int main(){

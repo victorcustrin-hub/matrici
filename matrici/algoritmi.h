@@ -391,6 +391,19 @@ int sumaEst(int a[100][100], int n)
     return s;
 }
 
+//00 01 02
+//10 11 12
+//20 21 22
+//lin=1;
+//col=1;
+
+//i<n-1     j          10  11  12
+//1<2 da   0<3 da      20  11  12
+//-        1<3 da      20  21  12
+//-        2<3 da      20  21  22
+//-        3<3 nu
+//2<2 nu
+
 void stergereLinie(int a[100][100], int& n, int m, int lin)
 {
     for (int i = lin; i < n - 1; i++)
@@ -403,6 +416,21 @@ void stergereLinie(int a[100][100], int& n, int m, int lin)
     n--;
 }
 
+
+//00 01 02
+//10 11 12
+//20 21 22
+//lin=1;
+//col=1;
+
+//i<n       j<m-1     01 11 21
+//0<3 da   1<2 da     02 11 21   
+//-        2<2 nu     
+//1<3 DA   1<2 da     02 12 21     
+//-        2<2 nu
+//2<3 da   1<2 da     02 12 22
+//         2<2 nu
+//3<3 nu
 void stergereColoana(int a[100][100], int n, int& m, int col)
 {
     for (int i = 0; i < n; i++)
@@ -511,6 +539,9 @@ int nrChenare(int n, int m)
 }
 
 //  5 x 3, k = 1: o singura coloana -> 3 elemente, nu 2*3 + 2*1 - 4
+//n=3,m=3
+
+//l=1*1=1 c=1*1=1;
 
 int nrElementeChenar(int n, int m, int k)
 {

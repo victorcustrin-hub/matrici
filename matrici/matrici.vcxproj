@@ -143,12 +143,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algoritmi.h" />
+    <ClInclude Include="chenare.h" />
     <ClInclude Include="diagonale.h" />
     <ClInclude Include="exercitii-matrici2.h" />
     <ClInclude Include="manual.h" />
     <ClInclude Include="parcurgere.h" />
     <ClInclude Include="parcurgerea_matricilor.h" />
     <ClInclude Include="parcurgerea_matricilor_patratice.h" />
+    <ClInclude Include="stergeri.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="matrice.in" />
