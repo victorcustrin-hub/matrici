@@ -47,6 +47,9 @@
     <ClInclude Include="stergeri.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inserari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="matrice.in">

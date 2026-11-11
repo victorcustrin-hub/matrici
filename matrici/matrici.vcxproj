@@ -146,6 +146,7 @@
     <ClInclude Include="chenare.h" />
     <ClInclude Include="diagonale.h" />
     <ClInclude Include="exercitii-matrici2.h" />
+    <ClInclude Include="inserari.h" />
     <ClInclude Include="manual.h" />
     <ClInclude Include="parcurgere.h" />
     <ClInclude Include="parcurgerea_matricilor.h" />

@@ -140,3 +140,4 @@ void solutie_2() {
     linii_neordonate(m2, l2, c2);
     cout << endl;
 }
+

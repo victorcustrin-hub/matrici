@@ -113,3 +113,4 @@ void solutie_2() {
 	verificare_sume(m3, n3);
 	cout << endl;
 }
+

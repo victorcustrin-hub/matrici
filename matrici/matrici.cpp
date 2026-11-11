@@ -1,4 +1,4 @@
-#include "stergeri.h"
+#include "inserari.h"
 using namespace std;
 
 int main(){

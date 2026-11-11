@@ -446,6 +446,21 @@ void stergereColoana(int a[100][100], int n, int& m, int col)
 //  face loc pe linia lin: liniile de la lin in jos coboara cu una,
 //  apoi completezi tu a[lin][0..m-1]
 
+//00 01 02
+//10 11 12
+//20 21 22
+
+// i>=lin      j<m
+// 2>=1 da     0<3 da     a[3][0] = a[2][0]
+//             1<3 da     a[3][1] = a[2][1]
+//             2<3 da     a[3][2] = a[2][2]
+//             3<3 nu
+// 1>=1 da     0<3 da     a[2][0] = a[1][0]
+//             1<3 da     a[2][1] = a[1][1]
+//             2<3 da     a[2][2] = a[1][2]
+//             3<3 nu
+// 0>=1 nu
+// n+
 void inserareLinie(int a[100][100], int& n, int m, int lin)
 {
     for (int i = n - 1; i >= lin; i--)
@@ -458,6 +473,23 @@ void inserareLinie(int a[100][100], int& n, int m, int lin)
     n++;
 }
 
+
+//00 01 02
+//10 11 12
+//20 21 22
+
+// i<n         j>=col
+// 0<3 da      2>=1 da    a[0][3] = a[0][2]
+//             1>=1 da    a[0][2] = a[0][1]
+//             0>=1 nu
+// 1<3 da      2>=1 da    a[1][3] = a[1][2]
+//             1>=1 da    a[1][2] = a[1][1]
+//             0>=1 nu
+// 2<3 da      2>=1 da    a[2][3] = a[2][2]
+//             1>=1 da    a[2][2] = a[2][1]
+//             0>=1 nu
+// 3<3 nu
+// m++ 
 void inserareColoana(int a[100][100], int n, int& m, int col)
 {
     for (int i = 0; i < n; i++)
