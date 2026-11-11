@@ -439,7 +439,7 @@ void stergereColoana(int a[100][100], int n, int& m, int col)
         {
             a[i][j] = a[i][j + 1];
         }
-    }
+    } 
     m--;
 }
 
@@ -559,6 +559,20 @@ void sortareLiniiDupaColoana(int a[100][100], int n, int m, int col)
 //        0 0 0 0 0
 // chenarul k: liniile k .. n-1-k, coloanele k .. m-1-k
 
+//n=5;
+//m=5;
+
+//mic     m<mic
+//5       5<5 nu     => return 3
+
+
+//n=3     0 0 0
+//m=3     0 1 0
+//        0 0 0
+
+//mic      m<mic
+//3        3<3 nu   => return 2
+
 int nrChenare(int n, int m)
 {
     int mic = n;
@@ -574,6 +588,8 @@ int nrChenare(int n, int m)
 //n=3,m=3
 
 //l=1*1=1 c=1*1=1;
+
+
 
 int nrElementeChenar(int n, int m, int k)
 {
@@ -599,6 +615,18 @@ int nrElementeChenar(int n, int m, int k)
 //  dreapta: a[k+1][m-1-k]   -> a[n-1-k][m-1-k]
 //  jos:     a[n-1-k][m-2-k] -> a[n-1-k][k]       doar daca n-1-k > k
 //  stanga:  a[n-2-k][k]     -> a[k+1][k]         doar daca m-1-k > k
+
+//       0 1 2 3 4
+// 
+// 0     0 0 0 0 0         i=0 j=0->4  i
+// 1     0 1 1 1 0
+// 2     0 1 2 1 0
+// 3     0 1 1 1 0
+// 4     0 0 0 0 0
+
+// i1=0  j1=04
+
+
 
 void afisareChenar(int a[100][100], int n, int m, int k)
 {
