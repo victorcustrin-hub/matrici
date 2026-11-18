@@ -145,4 +145,45 @@ void solutie_3() {
 }
 //
 
+//
+int ct_element_matrice(int a[100][100], int n, int m) {
+	int max = 0;
+	int rez = a[0][0];
 
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			int curent = a[i][j];
+			int f = 0;
+
+			for (int x = 0; x < n; x++) {
+				for (int y = 0; y < m; y++) {
+					if (a[x][y] == curent) {
+						f++;
+					}
+				}
+			}
+
+			if (f > max || (f == max && curent < rez)) {
+				max = f;
+				rez = curent;
+			}
+		}
+	}
+
+	return rez;
+}
+//??
+void solutie_4() {
+	cout << "TEST 1" << endl;
+	int m1[100][100] = { {3,7,3},{5,7,3} };
+	int l1 = 2;
+	int c1 = 3;
+	cout << ct_element_matrice(m1, l1, c1);
+	cout << endl;
+
+	cout << "TEST 2" << endl;
+	int m2[100][100] = { {1,2},{2,1} };
+	int l2 = 2;
+	int c2 = 2;
+	cout << ct_element_matrice(m2, l2, c2);
+}

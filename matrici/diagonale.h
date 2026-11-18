@@ -113,4 +113,97 @@ void solutie_2() {
 	verificare_sume(m3, n3);
 	cout << endl;
 }
+//
 
+//
+void peste_media_triunghiului(int a[100][100], int n) {
+	double s = 0;
+	int ct = 0;
+	
+	if (n <= 1) {
+		cout << "NU EXISTA";
+		return;
+	}
+
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; j++) {
+			s = s + a[i][j];
+			ct++;
+		}
+	}
+
+	double media = s / ct;
+	int contor = 0;
+	for (int i = 0; i < n; i++) {
+		if (a[i][i] > media) {
+			contor++;
+		}
+	}
+
+	cout << contor;
+}
+
+void solutie_3() {
+	cout << "TEST 1" << endl;
+	int m1[100][100] = { { 1,2,3 },{ 4,5,6 },{ 7,8,9 } };
+	int n1 = 3;
+	peste_media_triunghiului(m1, n1);
+	cout << endl;
+
+	cout << "TEST 2" << endl;
+	int m2[100][100] = { { 5,9,1 },{ 2,5,8 },{7,3,5} };
+	int n2 = 3;
+	peste_media_triunghiului(m2, n2);
+	cout << endl;
+
+	cout << "TEST 3" << endl;
+	int m3[100][100] = { { 7} };
+	int n3 = 1;
+	peste_media_triunghiului(m3, n3);
+	cout << endl;
+}
+//
+
+//??
+void zona_suma_max(int a[100][100], int n) {
+	int nord = 0, sud = 0, est = 0, vest = 0;
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (i < j && i + j < n - 1) {
+				nord += a[i][j];
+			}
+			else if (i > j && i + j > n - 1) {
+				sud += a[i][j];
+			}
+			else if (i < j && i + j > n - 1) {
+				est += a[i][j];
+			}
+			else if (i > j && i + j < n - 1) {
+				vest += a[i][j];
+			}
+		}
+	}
+
+}
+
+void solutie_4() {
+	cout << "TEST 1" << endl;
+	int m1[100][100] = { { 1,2,3,4,5 },{ 6,7,8,9,10 },{ 11,12,13,14,15 },{16,17,18,19,20},{21,22,23,24,25} };
+	int n1 = 5;
+	zona_suma_max(m1, n1);
+	cout << endl;
+
+	cout << "TEST 2" << endl;
+	int m2[100][100] = { {1,2,3 },{ 4,5,6},{7,8,9} };
+	int n2 = 3;
+	zona_suma_max(m2, n2);
+	cout << endl;
+
+	cout << "TEST 3" << endl;
+	int m3[100][100] = { {1,1,1},{1,1,1},{1,1,1} };
+	int n3 = 1;
+	zona_suma_max(m3, n3);
+	cout << endl;
+}
+//
