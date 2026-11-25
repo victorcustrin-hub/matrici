@@ -151,4 +151,55 @@ void solutie_2() {
 }
 //
 
+//
+int maxim_chenar(int a[100][100], int l, int c, int k) {
+	int i1 = k;
+	int j1 = k;
+	int i2 = l - 1 - k;
+	int j2 = c - 1 - k;
+	
+	int max = a[i1][j1];
+	for (int j = j1;j <= j2;j++) {
+		if (a[i1][j] > max) {
+			max = a[i1][j];
+		}
+	}
+	for (int i = i1 + 1;i <= i2;i++) {
+		if (a[i][j2] > max) {
+			max = a[i][j2];
+		}
+	}
+	for (int j = j2 - 1;j >= j1;j--) {
+		if (a[i2][j] > max) {
+			max = a[i2][j];
+		}
+	}
+	for (int i = i2 - 1;i >= i1 + 1;i--) {
+		if (a[i][j1] > max) {
+			max = a[i][j1];
+		}
+	}
+	return max;
+}
 
+void solutie_3() {
+	int a[100][100] = { {1,1,1,1},{1,3,3,1},{1,3,3,1},{1,1,1,1} };
+	int l = 4;
+	int c = 4;
+	int smax = -1;
+	int n = nr_chenare(l, c);
+	int kmax = 0;
+	int nrmax = 0;
+
+	for (int k = 0;k < n;k++) {
+		int s = suma_chenar(a, l, c, k);
+		if (s > smax) {
+			smax = s;
+			kmax = k;
+			nrmax = maxim_chenar(a, l, c, k);
+		}
+	}
+
+	cout << "Chenar " << kmax << ", suma " << smax << ", maxim " << nrmax << endl;
+}
+//

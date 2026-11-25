@@ -851,20 +851,24 @@ void solutie2h() {
 }
 //
 
-//??
-//00 01 02 03 04      
-//10 11 12 13 14
-//20 21 22 23 24
-//30 31 32 33 34
-//40 41 42 43 44
+
+//00      
+// 
+// 01 02 03 04      
+//   11      12 13 14
+//      22      23 24
+//   31      32 33 34
+//40      41 42 43 44
 
 void interschimbare_elemente_matrice(int m[100][100], int n) {
 
 	for (int i = 0;i < n;i++) {
 		for (int j = 0;j < n;j++) {
-			int aux = m[i][j];
-			m[i][j] = m[n - 1 - i][j];
-			m[n - 1 - i][j] = aux;
+			if (i + j < n) {
+				int aux = m[i][j];
+				m[i][j] = m[n - 1 - i][j];
+				m[n - 1 - i][j] = aux;
+			}
 		}
 	}
 

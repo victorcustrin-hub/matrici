@@ -111,3 +111,39 @@ void solutie_2() {
     cout << endl;
 }
 //
+
+//
+bool linie_elem_pare(int a[100][100], int c, int k) {
+    
+    for (int i = 0;i < c;i++) {
+        if (a[k][i] % 2 != 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+void jumatate_linie_para(int a[100][100], int& l, int c) {
+    
+    for (int i = 0;i < l;i++) {
+        if (linie_elem_pare(a, c, i)) {
+            inserare_linie(a, l, c, i + 1);
+            for (int j = 0;j < c;j++) {
+                a[i + 1][j] = a[i][j] / 2;
+            }
+            i++;
+        }
+    }
+}
+
+void solutie_3() {
+    int a[100][100] = { {12,48,60},{15,22,31},{84,26,70} };
+    int l = 3;
+    int c = 3;
+
+  
+  
+    jumatate_linie_para(a, l, c);
+    afisare(a, l, c);
+}

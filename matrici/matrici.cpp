@@ -1,6 +1,6 @@
-#include "stergeri.h"
+#include "parcurgerea_matricilor_patratice.h"
 using namespace std;
 
 int main(){
-	solutie_4();
+	solutie2i();
 }
